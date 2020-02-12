@@ -1,4 +1,4 @@
-package com.hhp227.firebasechat;
+package com.hhp227.fcmchat;
 
 import org.junit.Test;
 

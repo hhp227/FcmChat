@@ -1,4 +1,4 @@
-package com.hhp227.firebasechat;
+package com.hhp227.fcmchat;
 
 import android.text.Editable;
 import android.text.TextUtils;
@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.google.firebase.database.*;
-import com.hhp227.firebasechat.adapter.ChatAdapter;
-import com.hhp227.firebasechat.dto.ChatItem;
+import com.hhp227.fcmchat.adapter.ChatAdapter;
+import com.hhp227.fcmchat.dto.ChatItem;
 
 import java.util.Random;
 

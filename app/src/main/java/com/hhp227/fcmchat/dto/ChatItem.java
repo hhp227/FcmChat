@@ -1,4 +1,4 @@
-package com.hhp227.firebasechat.dto;
+package com.hhp227.fcmchat.dto;
 
 public class ChatItem {
     public String fireBaseKey;

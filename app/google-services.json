@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:33799503491:android:aa8cfe0a4165d9052525b6",
         "android_client_info": {
-          "package_name": "com.hhp227.firebasechat"
+          "package_name": "com.hhp227.fcmchat"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "33799503491-gehsq1r3bk81g6grfa28l2g9pt6kt7o2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.hhp227.firebasechat",
+            "package_name": "com.hhp227.fcmchat",
             "certificate_hash": "a75de5788ec806a02fd1235906cc475836ab1106"
           }
         },

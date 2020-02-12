@@ -1,4 +1,4 @@
-package com.hhp227.firebasechat.adapter;
+package com.hhp227.fcmchat.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import com.hhp227.firebasechat.R;
-import com.hhp227.firebasechat.dto.ChatItem;
+import com.hhp227.fcmchat.R;
+import com.hhp227.fcmchat.dto.ChatItem;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
