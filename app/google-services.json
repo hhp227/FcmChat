@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "33799503491",
-    "firebase_url": "https://fir-chat-dbaf6.firebaseio.com",
-    "project_id": "fir-chat-dbaf6",
-    "storage_bucket": "fir-chat-dbaf6.appspot.com"
+    "project_number": "169234191225",
+    "firebase_url": "https://fcmchat-5ca61.firebaseio.com",
+    "project_id": "fcmchat-5ca61",
+    "storage_bucket": "fcmchat-5ca61.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:33799503491:android:aa8cfe0a4165d9052525b6",
+        "mobilesdk_app_id": "1:169234191225:android:21a6c09cd8f61840",
         "android_client_info": {
           "package_name": "com.hhp227.fcmchat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "33799503491-gehsq1r3bk81g6grfa28l2g9pt6kt7o2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.hhp227.fcmchat",
-            "certificate_hash": "a75de5788ec806a02fd1235906cc475836ab1106"
-          }
-        },
-        {
-          "client_id": "33799503491-0v2u1ul0penma43v0jdsv7rnglnfq9ua.apps.googleusercontent.com",
+          "client_id": "169234191225-mi377n18bbj3et68heu1cn1tj16p3srv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA5MRyoyi374M5eBBh2ljv1eLjRUyr2Ptc"
+          "current_key": "AIzaSyAzgOlSyD-_BWYFEH35rFATFmhgRC1uSPg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "33799503491-0v2u1ul0penma43v0jdsv7rnglnfq9ua.apps.googleusercontent.com",
+              "client_id": "169234191225-mi377n18bbj3et68heu1cn1tj16p3srv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
