@@ -5,6 +5,9 @@ import java.io.Serializable;
 public class User implements Serializable {
     String id, name, email;
 
+    public User() {
+    }
+
     public User(String id, String name, String email) {
         this.id = id;
         this.name = name;

@@ -53,7 +53,6 @@ public class PreferenceManager {
         } else {
             oldNotifications = notification;
         }
-
         mEditor.putString(KEY_NOTIFICATIONS, oldNotifications);
         mEditor.commit();
     }

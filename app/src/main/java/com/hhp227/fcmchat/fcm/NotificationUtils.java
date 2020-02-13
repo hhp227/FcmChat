@@ -61,6 +61,7 @@ public class NotificationUtils {
         if (!TextUtils.isEmpty(imageUrl)) {
             if (imageUrl != null && imageUrl.length() > 4 && Patterns.WEB_URL.matcher(imageUrl).matches()) {
                 Bitmap bitmap = getBitmapFromURL(imageUrl);
+
                 if (bitmap != null) {
                     showBigNotification(bitmap, mBuilder, icon, title, message, timeStamp, resultPendingIntent, alarmSound);
                 } else {
@@ -86,7 +87,6 @@ public class NotificationUtils {
         } else {
             inboxStyle.addLine(message);
         }
-
         Notification notification;
         notification = mBuilder.setSmallIcon(icon).setTicker(title).setWhen(0)
                 .setAutoCancel(true)
@@ -99,13 +99,14 @@ public class NotificationUtils {
                 .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), icon))
                 .setContentText(message)
                 .build();
-
         NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+
         notificationManager.notify(Config.NOTIFICATION_ID, notification);
     }
 
     private void showBigNotification(Bitmap bitmap, NotificationCompat.Builder mBuilder, int icon, String title, String message, String timeStamp, PendingIntent resultPendingIntent, Uri alarmSound) {
         NotificationCompat.BigPictureStyle bigPictureStyle = new NotificationCompat.BigPictureStyle();
+
         bigPictureStyle.setBigContentTitle(title);
         bigPictureStyle.setSummaryText(Html.fromHtml(message).toString());
         bigPictureStyle.bigPicture(bitmap);
@@ -121,16 +122,12 @@ public class NotificationUtils {
                 .setLargeIcon(BitmapFactory.decodeResource(mContext.getResources(), icon))
                 .setContentText(message)
                 .build();
-
         NotificationManager notificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+
         notificationManager.notify(Config.NOTIFICATION_ID_BIG_IMAGE, notification);
     }
 
-    /**
-     * Downloading push notification image before displaying it in
-     * the notification tray
-     * */
-    public Bitmap getBitmapFromURL(String strURL) {
+    private Bitmap getBitmapFromURL(String strURL) {
         try {
             URL url = new URL(strURL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -145,7 +142,7 @@ public class NotificationUtils {
         }
     }
 
-    public void playNotificationSound() {
+    void playNotificationSound() {
         try {
             Uri alarmSound = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
                     + "://" + AppController.getInstance().getApplicationContext().getPackageName() + "/raw/notification");
@@ -156,7 +153,7 @@ public class NotificationUtils {
         }
     }
 
-    public static boolean isAppIsInBackground(Context context) {
+    static boolean isAppIsInBackground(Context context) {
         boolean isInBackground = true;
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT_WATCH) {
@@ -186,7 +183,7 @@ public class NotificationUtils {
         notificationManager.cancelAll();
     }
 
-    public static long getTimeMilliSec(String timeStamp) {
+    private static long getTimeMilliSec(String timeStamp) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
             Date date = format.parse(timeStamp);

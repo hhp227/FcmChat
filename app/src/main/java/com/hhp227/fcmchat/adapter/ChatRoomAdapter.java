@@ -64,10 +64,9 @@ public class ChatRoomAdapter extends RecyclerView.Adapter {
         this.mOnItemClickListener = OnItemClickListener;
     }
 
-    public static String getTimeStamp(String dateStr) {
+    private static String getTimeStamp(String dateStr) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String timestamp = "";
-
         today = today.length() < 2 ? "0" + today : today;
 
         try {
@@ -80,14 +79,13 @@ public class ChatRoomAdapter extends RecyclerView.Adapter {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         return timestamp;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView name, message, timestamp, count;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView name, message, timestamp, count;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
             message = itemView.findViewById(R.id.message);

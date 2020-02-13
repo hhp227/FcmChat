@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.e(TAG, "response: " + response);
                             try {
                                 JSONObject obj = new JSONObject(response);
+
                                 if (!obj.getBoolean("error")) {
                                     JSONObject userObj = obj.getJSONObject("user");
                                     User user = new User(userObj.getString("user_id"), userObj.getString("name"), userObj.getString("email"));
@@ -66,16 +67,16 @@ public class LoginActivity extends AppCompatActivity {
                                 } else
                                     Toast.makeText(getApplicationContext(), "" + obj.getJSONObject("error").getString("message"), Toast.LENGTH_LONG).show();
                             } catch (JSONException e) {
-                                Log.e(TAG, "json parsing error: " + e.getMessage());
-                                Toast.makeText(getApplicationContext(), "Json parse error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                Log.e(TAG, "json 파싱 에러: " + e.getMessage());
+                                Toast.makeText(getApplicationContext(), "Json 파싱 에러: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             NetworkResponse networkResponse = error.networkResponse;
-                            Log.e(TAG, "Volley error: " + error.getMessage() + ", code: " + networkResponse);
-                            Toast.makeText(getApplicationContext(), "Volley error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                            Log.e(TAG, "Volley 에러: " + error.getMessage() + ", 코드: " + networkResponse);
+                            Toast.makeText(getApplicationContext(), "Volley 에러: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }) {
                         @Override
